@@ -1,0 +1,31 @@
+{% extends 'base.html'%}
+
+
+{% block content%}
+
+
+
+
+<form class="form-inline my-2 my-lg-0" method = "POST"  >
+    {% csrf_token %}
+
+<div class="card mx-auto" id  = 'mainCard'>
+    <div class="card-body mx-auto">
+
+
+        <h1>Generated Image</h1>
+
+        {% load static %}
+        <img src="{% static '/images/lady.png' %}" alt="aws image">
+
+
+</div>
+    <button class="btn btn-outline-success my-2 my-sm-0 ml-3 mr-3" type="submit">Create Image</button>
+</div>
+
+
+</form>
+
+
+
+{% endblock %}

@@ -6,17 +6,24 @@
 
 <h3> This is the image Generator</h3>
 
-<div class="card mx-auto" id  = 'mainCard'>
+
+<form class="form-inline my-2 my-lg-0" action = "{% url 'getImage' %}" method = "POST"  >
+    {% csrf_token %}
+
+<div class="card mx-auto w-50" id  = 'mainCard'>
     <div class="card-body mx-auto">
 
 
 
-        <tr><td>Enter Image Prompt: </td><td><input class="form-control mr-sm-2" type="text" placeholder="prompt"  name = 'Prompt'></td></tr>
+        <tr><td>Enter Image Prompt: </td><td><input class="form-control my-2 my-sm-0 ml-3 mr-3" style="width: 75%" type="text" placeholder="prompt"  name = 'prompt'></td></tr>
 
 
 </div>
     <button class="btn btn-outline-success my-2 my-sm-0 ml-3 mr-3" type="submit">Create Image</button>
 </div>
+
+
+</form>
 
 
 
